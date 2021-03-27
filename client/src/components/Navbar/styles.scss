@@ -1,0 +1,193 @@
+@import '../../styles/vars';
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+.navbar {
+    background-color: var(--color-primary);
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 var(--gutter-medium);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    
+    & a {
+        text-decoration: none;
+    }
+
+    &__logo {
+        margin-right: var(--gutter-small);
+        color: var(--color-light);
+        cursor: pointer;
+        font-size: var(--font-large);
+        font-family: 'Fredoka One', cursive;
+    }
+
+    &__icon {
+        font-size: var(--font-medium);
+        color: var(--color-light);
+    }
+
+    &__menu__list {
+        display: none;
+    }
+}
+
+
+.sidebar__menu {
+    padding-top: var(--gutter-medium);
+    background-color: var(--color-primary);
+    width: 250px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 8vh;
+    left: -100%;
+    transition: var(--transition);
+    z-index: 10;
+    
+    &.active {
+        left: 0;
+    }
+
+    &__list {
+        width: 100%;
+    }
+
+    &__toggle {
+        height: 8vh;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: var(--gutter-small) 0px var(--gutter-small) var(--gutter-small);
+        list-style: none;
+        height: 60px;
+
+        & a {
+            text-decoration: none;
+            color: var(--color-light);
+            font-size: 18px;
+            width: 95%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            padding: 0 16px;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: var(--color-secondary);
+            }
+        }
+
+        &__title {
+            margin-left: var(--gutter-small);
+        }
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .navbar {
+        background-color: transparent;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+
+        &__logo {
+            color: var(--color-primary);
+        }
+
+        &__icon {
+            display: none;
+        }
+
+        &__menu__list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            margin-right: var(--gutter-small);
+        }
+
+        &__menu__item {
+            display: inline-block;
+            margin-right: var(--gutter-small);
+            text-decoration: none;
+            border-radius: 5px;
+
+            & a {
+                position: relative;
+                display: block;
+                padding: 8px 0;
+                margin: 0 var(--gutter-medium);
+                letter-spacing: 0.1rem;
+                text-decoration: none;
+                color: var(--color-primary);
+
+                &::before {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    height: 2px;
+                    width: 100%;
+                    background-color: var(--color-primary);
+                    transform-origin: right top;
+                    transform: scale(0, 1);
+                    transition: color 0.1s,transform 0.2s ease-out;
+                }
+
+                &:active::before {
+                    background-color: #000;
+                }
+
+                &:hover::before, a:focus::before {
+                    transform-origin: left top;
+                    transform: scale(1, 1);
+                }
+            }
+        }
+
+        &.plain {
+            background-color: var(--color-primary);
+
+            .navbar {
+                &__logo {
+                    color: var(--color-light);
+                }
+
+                &__menu__list {
+                    & a {
+                    color: var(--color-light);
+                    
+                        &::before {
+                            background-color: var(--color-light);
+                        }
+                    }
+                }
+            }
+
+            .btn {
+                &--outline {
+                    background-color: transparent;
+                    color: var(--color-light);
+                    border: 1px solid var(--color-light);
+                }
+            }
+        }
+
+    }
+
+    .sidebar__menu {
+        display: none;
+    }
+}

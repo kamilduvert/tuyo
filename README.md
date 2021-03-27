@@ -13,7 +13,7 @@ Chaque "tip" contient un titre, une localisation, une description, un nombre de 
 
 L'utilisateur inscrit et connecté (authentification au choix via google, facebook ou email ) peut ajouter des tips dans ses favoris. L'affichage de carte interactive lui permet de toutes les visualiser afin d'évaluer les distances et faciliter sa prise de décision pour la journée.  
 
-La page d'itinéraire permet à l'utilisateur connecté de construire un itinéraire d'une journée basé sur les 'tips' sélectionnés préalablement. 
+La page d'itinéraire permet à l'utilisateur connecté de construire un itinéraire d'une journée basé sur les 'tips' sélectionnés préalablement.
 Il peut aussi réorganiser l'emploi du temps grâce à un système de glisser-déposer, le sauvegarder et l'exporter (en format PDF ou sur son Google Calendar).
 
 ## Technologies

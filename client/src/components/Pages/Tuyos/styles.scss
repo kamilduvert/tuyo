@@ -1,0 +1,43 @@
+.tuyos {
+    text-align: center;
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1544244790-9aebdd40c942?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: var(--color-primary);
+
+    &__hero {
+        &__title {
+            margin-top: var(--gutter-medium);
+            padding: 0 var(--gutter-medium);
+            font-size: var(--font-medium);
+        }
+    
+        &__categories {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+    
+        &__category {
+            margin:  var(--gutter-small);
+            border: 1px solid var(--color-primary);
+            background-color: var(--color-primary);
+            color: var(--color-light);
+            border-radius: 5px;
+            padding: var(--gutter-small) var(--gutter-medium);
+            display: flex;
+    
+            &__title {
+                margin-right:  var(--gutter-medium);
+            }
+        }
+
+        &__container ul {
+            margin-top: var(--gutter-medium);
+        }
+    }
+
+}
