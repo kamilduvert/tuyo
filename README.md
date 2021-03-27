@@ -1,9 +1,11 @@
 # tuyo
 
-## A propos
+## Concept
 
 Tuyo est un générateur d'itinéraires de voyage avec des recommandations de la part d'habitants locaux !
 Il permet de planifier votre journée selon les conseils avisés des adeptes de votre prochaine destination.
+
+Wireframes disponibles [ici](https://whimsical.com/tuyo-SRe1iRjrV6aU6f6jEGtBnV)
 
 ## Fonctionnalités
 
@@ -18,6 +20,9 @@ Il peut aussi réorganiser l'emploi du temps grâce à un système de glisser-d�
 
 ## Technologies
 
-Tuyo est une Single Page Application développée avec Node.js, Express, Postgresql pour le Back, React.js, Redux et SASS pour le Front.
-La fonction de recherche utilise l'API de Géolocalisation de Google ainsi que le package react-geosuggest pour l'autocompletion. La carte est développée grâce à l'API Google Maps.
-Le glisser-deposer de l'itinéraire s'effectue grâce au package react-sortable et l'authentification est gérée quant à elle grâce à Google OAuth2.0.
+Tuyo est une Single Page Application développée avec Node.js, Express, Postgresql (ORM Sequelize) pour le Back, React.js, Redux et SASS pour le Front.
+La fonction de recherche utilise l'API de Geolocation Leaflet.js avec Here pour le géocoding.
+Le glisser-deposer de l'itinéraire s'effectue grâce au package react-sortable.
+
+## Preview
+![tuyo-home](https://github.com/kamilduvert/tuyo/blob/master/Capture.PNG)
