@@ -5,7 +5,7 @@
 Tuyo est un générateur d'itinéraires de voyage avec des recommandations de la part d'habitants locaux !
 Il permet de planifier votre journée selon les conseils avisés des adeptes de votre prochaine destination.
 
-Wireframes disponibles [ici](https://whimsical.com/tuyo-SRe1iRjrV6aU6f6jEGtBnV)
+[Wireframes disponibles](https://whimsical.com/tuyo-SRe1iRjrV6aU6f6jEGtBnV)
 
 ## Fonctionnalités
 
